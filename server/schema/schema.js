@@ -1,5 +1,6 @@
 const graphql = require("graphql");
 const _ = require("lodash");
+var songData = require("../songData.json");
 
 const {
   GraphQLObjectType,
@@ -7,12 +8,10 @@ const {
   GraphQLSchema,
   GraphQLID,
   GraphQLInt,
+  GraphQLList,
 } = graphql;
 
-var playlist = [
-  { song: "Teste", artist: "Teste 2 ", songReleaseDate: "Janeiro" },
-  { song: "Teste2", artist: "Teste 2 ", songReleaseDate: "Janeiro" },
-];
+var playlist = songData;
 
 const PlaylistType = new GraphQLObjectType({
   name: "Playlist",
@@ -43,12 +42,18 @@ const PlaylistType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
-    playlist: {
+    music: {
       type: PlaylistType,
       args: { song: { type: GraphQLID } },
       resolve(parent, args) {
         console.log(typeof args.song);
         return _.find(playlist, { song: args.song });
+      },
+    },
+    musics: {
+      type: new GraphQLList(PlaylistType),
+      resolve(parent, args) {
+        return playlist;
       },
     },
   },

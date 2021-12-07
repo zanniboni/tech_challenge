@@ -1,0 +1,8 @@
+{ 
+    "aws" :
+    {
+        "accessKeyId": "AKIAQS6ID4F3XCHWACWH", 
+        "secretAccessKey": "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", 
+        "region": "us-east-1" 
+    }
+}
