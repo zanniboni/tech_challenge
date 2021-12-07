@@ -1,0 +1,26 @@
+{
+  "name": "tech_challenge",
+  "version": "1.0.0",
+  "description": "Create a React application that shows a list of songs with their information and metrics displayed. The app should have at least **2 pages (views)**:\r A landing page, and a page to show data coming from an API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zanniboni/tech_challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zanniboni/tech_challenge/issues"
+  },
+  "homepage": "https://github.com/zanniboni/tech_challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.0.1",
+    "lodash": "^4.17.21"
+  }
+}
