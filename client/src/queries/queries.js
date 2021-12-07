@@ -10,19 +10,6 @@ const getMusicsQuery = gql`
       metricA
       metricB
       metricC
-      metricD
-      metricE
-      metricF
-      metricG
-      metricH
-      metricI
-      metricJ
-      metricK
-      metricL
-      metricM
-      metricN
-      metricO
-      metricP
     }
   }
 `;
